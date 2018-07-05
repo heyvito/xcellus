@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+mkdir -p /go/src/app
+cd /go/src/app && \
+    cp /source/* /go/src/app && \
+    dep ensure && \
+    go build -o /source/libxcbindings-linux-amd64.so -buildmode=c-shared main.go

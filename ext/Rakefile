@@ -1,0 +1,13 @@
+require 'mkmf'
+
+PREFIX = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+task :default do
+  if RbConfig::CONFIG['target'] =~ /darwin/
+    f = File.join PREFIX, 'lib', 'xcellus_bin.bundle'
+    so = File.join PREFIX, 'bin', 'libxcbindings-darwin-amd64.so'
+    open('/tmp/xxx', 'w') do |fi|
+      fi.puts "install_name_tool -change 'libxcbindings-darwin-amd64.so' '#{so}' #{f}"
+    end
+    system "install_name_tool -change 'libxcbindings-darwin-amd64.so' '#{so}' #{f}"
+  end
+end
