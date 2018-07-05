@@ -1,0 +1,14 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+
+[{*.rb,*.yml,*.rake,Gemfile,Rakefile}]
+indent_style = space
+indent_size = 2
+
+[{*.c,*.h}]
+indent_style = tab
+indent_size = 4
