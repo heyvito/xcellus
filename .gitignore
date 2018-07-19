@@ -3,3 +3,5 @@ pkg/
 tmp/
 *.bundle
 *.so
+.DS_Store
+.vscode/
