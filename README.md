@@ -58,7 +58,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/victor
 
 ## Code of Conduct
 
-Everyone interacting in the Pagu project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/victorgama/xcellus/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Xcellus project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/victorgama/xcellus/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
