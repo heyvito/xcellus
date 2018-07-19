@@ -52,6 +52,36 @@ end
 # => 6377
 ```
 
+It also can modify files:
+
+```ruby
+require 'xcellus'
+Xcellus.with 'BrianosMusic.xlsx' do |xls|
+  # Let's find and replace 'I Sat by the Ocean' with something else:
+  row_index = xls.find_in_column 'Brian\'s Worksheet', 1, 'I Sat by the Ocean'
+  # row_index == 4
+  xls.replace_row 'Brian\'s Worksheet', row_index, [nil, 'The Evil has Landed']
+  # Now, the row ['Queens of the Stone Age', 'I Sat by the Ocean',   270],
+  # will be composed by ['Queens of the Stone Age', 'The Evil has Landed',   270],
+  # Let's also add a new row
+  xls.append [
+    { title: 'Brian\'s Worksheet', rows: [['Queen', 'Spread Your Wings', 27]] }
+  ]
+  # Now, Brian's Worksheet has the following data:
+  # | Artist                  | Track               | Playcount |
+  # | Metallica               | Hero of the Day     | 242       |
+  # | Metallica               | The Shortest Straw  | 186       |
+  # | Queens of the Stone Age | My God Is the Sun   | 276       |
+  # | Queens of the Stone Age | The Evil has Landed | 270       |
+  # | Gorillaz                | On Melancholy Hill  | 203       |
+  # | Gorillaz                | Kids With Guns      | 184       |
+  # | Queen                   | Spread Your Wings   | 27        |
+  # And we can save a copy:
+  xls.save('Copy of BrianosMusic.xlsx')
+end
+# Here, all resources are freed.
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/victorgama/xcellus. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
