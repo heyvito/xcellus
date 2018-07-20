@@ -118,6 +118,6 @@ void Init_xcellus_bin() {
 	rb_define_singleton_method(module, "_find_in_column", rb_xcellus_find_in_column, 4);
 	rb_define_singleton_method(module, "_replace_row", rb_xcellus_replace_row, 4);
 	rb_define_singleton_method(module, "_save", rb_xcellus_save, 2);
-	rb_define_singleton_method(module, "_close", rb_xcellus_close, 2);
+	rb_define_singleton_method(module, "_close", rb_xcellus_close, 1);
 	rb_define_singleton_method(module, "_append", rb_xcellus_append, 2);
 }

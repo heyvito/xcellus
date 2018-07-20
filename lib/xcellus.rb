@@ -4,7 +4,7 @@ require 'json'
 
 # Xcellus provides a clean interface to an underlying, native XLSX parser/writer
 module Xcellus
-  VERSION = '2.0.3'.freeze
+  VERSION = '2.0.4'.freeze
 
   class << self
     # Transforms a provided array of objects into a XLSX file, and returns it as
