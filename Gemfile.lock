@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    xcellus (2.0.2)
+    xcellus (2.0.3)
 
 GEM
   remote: https://rubygems.org/

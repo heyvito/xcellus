@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name    = 'xcellus'
-  s.version = '2.0.2'
+  s.version = '2.0.3'
   s.summary       = %q{Xcellus is an ugly XLSX generator}
   s.description   = <<-description
     Xcellus leverages a native extension to create XLSX files. It is an 'ugly'
