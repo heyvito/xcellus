@@ -4,7 +4,7 @@ require 'json'
 
 # Xcellus provides a clean interface to an underlying, native XLSX parser/writer
 module Xcellus
-  VERSION = '2.0.1'.freeze
+  VERSION = '2.0.2'.freeze
 
   class << self
     # Transforms a provided array of objects into a XLSX file, and returns it as
@@ -128,7 +128,7 @@ module Xcellus
       unless data.kind_of? Array
         raise ArgumentError, 'Xcellus.append only accepts Arrays'
       end
-      StringIO.new(Xcellus::_transform(data.to_json))
+      StringIO.new(Xcellus::_append(@handle, data.to_json))
     end
   end
 end
